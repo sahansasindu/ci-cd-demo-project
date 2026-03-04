@@ -1,11 +1,12 @@
 package com.cicd_sample_project.ci_cd_demo_project.service.impl;
 
-import com.jevigsoft.cicd.dto.user.UserReqDto;
-import com.jevigsoft.cicd.entity.User;
-import com.jevigsoft.cicd.enums.common.ActiveStatus;
-import com.jevigsoft.cicd.exception.dto.CustomServiceException;
-import com.jevigsoft.cicd.repository.UserRepository;
-import com.jevigsoft.cicd.service.UserService;
+
+import com.cicd_sample_project.ci_cd_demo_project.dto.user.UserReqDto;
+import com.cicd_sample_project.ci_cd_demo_project.entity.User;
+import com.cicd_sample_project.ci_cd_demo_project.enums.ActiveStatus;
+import com.cicd_sample_project.ci_cd_demo_project.exception.dto.CustomServiceException;
+import com.cicd_sample_project.ci_cd_demo_project.repository.UserRepository;
+import com.cicd_sample_project.ci_cd_demo_project.service.UserService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.modelmapper.ModelMapper;

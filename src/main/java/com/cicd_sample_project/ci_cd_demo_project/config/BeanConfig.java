@@ -17,8 +17,8 @@ import java.time.LocalDateTime;
 import java.time.ZoneId;
 import java.time.format.DateTimeFormatter;
 
-import static com.jevigsoft.cicd.constants.AppConstants.PatternConstants.DATE_TIME_RESPONSE_PATTERN;
-import static com.jevigsoft.cicd.constants.AppConstants.PatternConstants.TIME_ZONE;
+import static com.cicd_sample_project.ci_cd_demo_project.constants.AppConstants.PatternConstants.DATE_TIME_RESPONSE_PATTERN;
+import static com.cicd_sample_project.ci_cd_demo_project.constants.AppConstants.PatternConstants.TIME_ZONE;
 
 @EnableCaching
 @EnableScheduling

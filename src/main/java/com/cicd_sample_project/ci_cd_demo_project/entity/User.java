@@ -1,20 +1,13 @@
 package com.cicd_sample_project.ci_cd_demo_project.entity;
 
-
 import com.fasterxml.jackson.annotation.JsonFormat;
-import com.jevigsoft.cicd.enums.common.ActiveStatus;
-import com.jevigsoft.cicd.enums.common.UserRole;
+import com.cicd_sample_project.ci_cd_demo_project.enums.ActiveStatus;
+import com.cicd_sample_project.ci_cd_demo_project.enums.UserRole;
+import jakarta.persistence.*;
 import lombok.*;
 
-import javax.persistence.*;
 import java.util.Date;
 
-/**
- * @author Navishka Darshana - navishka@learnfi.lk
- * @project my-cicd-project
- * @CreatedBy IntelliJ IDEA
- * @created 19/01/2024 - 18.59
- */
 @Builder
 @Getter
 @Setter
@@ -36,7 +29,6 @@ public class User {
     private int filedLoginAttemptCount;
     @Column(nullable = true)
     private String mobile;
-
 
     @JsonFormat(pattern = "dd-MM-yyyy HH:MM:ss")
     @Temporal(TemporalType.TIMESTAMP)
