@@ -1,0 +1,13 @@
+package com.cicd_sample_project.ci_cd_demo_project.service.impl;
+
+
+import lombok.RequiredArgsConstructor;
+import lombok.extern.log4j.Log4j2;
+import org.springframework.stereotype.Service;
+
+@Log4j2
+@RequiredArgsConstructor
+@Service
+public class AdminServiceImpl {
+
+}
