@@ -1,11 +1,5 @@
 package com.cicd_sample_project.ci_cd_demo_project.exception.dto;
 
-/**
- * @author Navishka Darshana - navishka@learnfi.lk
- * @project my-cicd-project
- * @CreatedBy IntelliJ IDEA
- * @created 26/08/2024 - 23.16
- */
 
 
 public class CustomAuthenticationException extends RuntimeException {

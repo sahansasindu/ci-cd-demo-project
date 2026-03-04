@@ -13,12 +13,6 @@ import org.springframework.web.context.request.WebRequest;
 import org.springframework.web.method.annotation.MethodArgumentTypeMismatchException;
 import org.springframework.web.servlet.mvc.method.annotation.ResponseEntityExceptionHandler;
 
-/**
- * @author Navishka Darshana - navishka@learnfi.lk
- * @project my-cicd-project
- * @CreatedBy IntelliJ IDEA
- * @created 26/08/2024 - 23.16
- */
 
 @ControllerAdvice
 @Log4j2
@@ -54,19 +48,19 @@ public class AppExceptionsHandler extends ResponseEntityExceptionHandler {
                 HttpStatus.BAD_REQUEST);
     }
 
-    @Override
-    public ResponseEntity<Object> handleMissingServletRequestParameter(MissingServletRequestParameterException ex,
-            HttpHeaders headers, HttpStatus status, WebRequest request) {
-        ex.printStackTrace();
-        return new ResponseEntity<>(new ErrorMessageResponse(false, ex.getMessage(), HttpStatus.BAD_REQUEST.value()),
-                HttpStatus.BAD_REQUEST);
-    }
-
-    @Override
-    protected ResponseEntity<Object> handleHttpMessageNotReadable(HttpMessageNotReadableException ex,
-            HttpHeaders headers, HttpStatus status, WebRequest request) {
-        ex.printStackTrace();
-        return new ResponseEntity<>(new ErrorMessageResponse(false, ex.getMessage(), HttpStatus.BAD_REQUEST.value()),
-                HttpStatus.BAD_REQUEST);
-    }
+//    @Override
+//    public ResponseEntity<Object> handleMissingServletRequestParameter(MissingServletRequestParameterException ex,
+//            HttpHeaders headers, HttpStatus status, WebRequest request) {
+//        ex.printStackTrace();
+//        return new ResponseEntity<>(new ErrorMessageResponse(false, ex.getMessage(), HttpStatus.BAD_REQUEST.value()),
+//                HttpStatus.BAD_REQUEST);
+//    }
+//
+//    @Override
+//    protected ResponseEntity<Object> handleHttpMessageNotReadable(HttpMessageNotReadableException ex,
+//            HttpHeaders headers, HttpStatus status, WebRequest request) {
+//        ex.printStackTrace();
+//        return new ResponseEntity<>(new ErrorMessageResponse(false, ex.getMessage(), HttpStatus.BAD_REQUEST.value()),
+//                HttpStatus.BAD_REQUEST);
+//    }
 }

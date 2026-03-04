@@ -6,12 +6,6 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 import org.springframework.http.HttpStatus;
 
-/**
- * @author Navishka Darshana - navishka@learnfi.lk
- * @project my-cicd-project
- * @CreatedBy IntelliJ IDEA
- * @created 26/08/2024 - 23.16
- */
 
 
 @NoArgsConstructor
