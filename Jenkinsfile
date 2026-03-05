@@ -5,7 +5,7 @@ pipeline {
             DOCKER_IMAGE = "sahansasindu/spring-boot-app:latest"
             DOCKER_CREDENTIALS_ID = "dockerhub-credentials"
             SSH_CREDENTIALS_ID = "learnfi-prod-server"
-            SSH_TARGET = "ubuntu@54.254.18.85"
+            SSH_TARGET = "ubuntu@13.62.26.114"
             DOCKER_CONTAINER = "spring-boot-app"
      }
 
@@ -74,8 +74,8 @@ pipeline {
         stage('Deploy') {
             steps {
                 script {
-                    withCredentials([usernamePassword(credentialsId: 'learnfi-prod-database-credentials', usernameVariable: 'DB_USERNAME', passwordVariable: 'DB_PASSWORD')]) {
-                        sshagent(['learnfi-prod-server']) {
+                    withCredentials([usernamePassword(credentialsId: 'database-credentials', usernameVariable: 'DB_USERNAME', passwordVariable: 'DB_PASSWORD')]) {
+                        sshagent(['prod-server']) {
                                 sh '''
                                 ssh -o StrictHostKeyChecking=no $SSH_TARGET << EOF
                                 docker login -u $DOCKER_USER -p $DOCKER_PASS
