@@ -23,7 +23,7 @@ public class UserController {
     @PostMapping()
     public ResponseEntity<?> addNewUser(@RequestBody UserReqDto userReqDto) {
         userService.addNewUser(userReqDto);
-        System.out.println("Hellow1111");
+        System.out.println("Hellow11111");
         return ResponseEntity.ok(new CommonResponse<>(true, "User added successfully"));
     }
 
