@@ -42,7 +42,7 @@ pipeline {
         stage('Test') {
             steps {
                 script {
-                     withCredentials([usernamePassword(credentialsId: 'learnfi-prod-database-credentials', usernameVariable: 'DB_USERNAME', passwordVariable: 'DB_PASSWORD')]) {
+                     withCredentials([usernamePassword(credentialsId: 'database-credentials', usernameVariable: 'DB_USERNAME', passwordVariable: 'DB_PASSWORD')]) {
                         sh '''#!/bin/bash
                         echo "Testing application with MySQL database"
                         export DB_USERNAME=$DB_USERNAME
