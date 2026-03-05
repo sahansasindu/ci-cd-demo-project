@@ -2,7 +2,7 @@ pipeline {
     agent any
 
      environment {
-            DOCKER_IMAGE = "navishkadarshana/spring-boot-app:latest"
+            DOCKER_IMAGE = "navishkadarshana1/spring-boot-app:latest"
             DOCKER_CREDENTIALS_ID = "dockerhub-credentials"
             SSH_CREDENTIALS_ID = "learnfi-prod-server"
             SSH_TARGET = "ubuntu@54.254.18.85"
@@ -18,7 +18,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git branch: 'dev', url: 'https://gitlab.com/jevigsoft/my-cicd-project.git', credentialsId: 'jevigsoft-gitlab-credentials'
+                git branch: 'main', url: 'https://github.com/sahansasindu/ci-cd-demo-project.git', credentialsId: 'jenkins-new-token'
             }
         }
 
