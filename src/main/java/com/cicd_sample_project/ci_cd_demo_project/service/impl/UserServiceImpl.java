@@ -1,6 +1,5 @@
 package com.cicd_sample_project.ci_cd_demo_project.service.impl;
 
-
 import com.cicd_sample_project.ci_cd_demo_project.dto.user.UserReqDto;
 import com.cicd_sample_project.ci_cd_demo_project.entity.User;
 import com.cicd_sample_project.ci_cd_demo_project.enums.ActiveStatus;
@@ -13,6 +12,7 @@ import org.modelmapper.ModelMapper;
 import org.springframework.stereotype.Service;
 
 import java.util.Date;
+import java.util.List;
 
 @Service
 @RequiredArgsConstructor
@@ -32,8 +32,19 @@ public class UserServiceImpl implements UserService {
             user.setStatus(ActiveStatus.ACTIVE);
 
             userRepository.save(user);
-        }catch (Exception e) {
+        } catch (Exception e) {
             log.error("error : method : addNewUser", e);
+            throw new CustomServiceException("Oops! Something went wrong");
+        }
+    }
+
+    @Override
+    public List<User> getAllUsers() {
+        try {
+            log.info("start method getAllUsers");
+            return userRepository.findAll();
+        } catch (Exception e) {
+            log.error("error : method : getAllUsers", e);
             throw new CustomServiceException("Oops! Something went wrong");
         }
     }
