@@ -1,14 +1,14 @@
-# Use an official Tomcat image
-FROM tomcat:9.0-jdk11-openjdk
+# Use lightweight Java 17 runtime
+FROM eclipse-temurin:17-jre
 
-# Remove default apps
-RUN rm -rf /usr/local/tomcat/webapps/*
+# Set working directory
+WORKDIR /app
 
-# Copy the WAR file to the webapps directory
-COPY target/api.war /usr/local/tomcat/webapps/api.war
+# Copy JAR file
+COPY target/api.jar app.jar
 
-# Expose the port the application runs on
+# Expose application port
 EXPOSE 8080
 
-# Start Tomcat server
-CMD ["catalina.sh", "run"]
+# Run Spring Boot app
+ENTRYPOINT ["java", "-jar", "app.jar"]
