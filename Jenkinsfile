@@ -2,7 +2,7 @@ pipeline {
     agent any
 
      environment {
-            DOCKER_IMAGE = "navishkadarshana1/spring-boot-app:latest"
+            DOCKER_IMAGE = "sahansasindu/spring-boot-app:latest"
             DOCKER_CREDENTIALS_ID = "dockerhub-credentials"
             SSH_CREDENTIALS_ID = "learnfi-prod-server"
             SSH_TARGET = "ubuntu@54.254.18.85"
