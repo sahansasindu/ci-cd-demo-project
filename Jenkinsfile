@@ -10,7 +10,7 @@ pipeline {
      }
 
     tools {
-        maven 'Maven 3.9.7'
+        maven 'Maven 3.9.10'
     }
 
 
@@ -18,7 +18,7 @@ pipeline {
 
         stage('Checkout') {
             steps {
-                git branch: 'main', url: 'https://github.com/sahansasindu/ci-cd-demo-project.git', credentialsId: 'jenkins-new-token'
+                git branch: 'main', url: 'https://github.com/sahansasindu/ci-cd-demo-project.git', credentialsId: 'jenkins-token'
             }
         }
 
